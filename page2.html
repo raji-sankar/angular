@@ -1,0 +1,13 @@
+<html ng-app>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body style="padding:50px"
+        ng-init="recipes = [ 'Pesto', 'Garlic Broccoli', 'Tomato', 'Last' ]">
+  <ul>
+      <li ng-repeat="recipe in recipes">{{ recipe }}</li>
+  </ul>
+  <p> There are {{ recipes.length }} recipes so far!</p>
+</body>
+</html>

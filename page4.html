@@ -1,0 +1,23 @@
+<html ng-app>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body style="padding:50px"
+        ng-init="recipes = [
+         {'name': 'Pesto', 'type': 'Italian', 'summary': 'bla'},
+         {'name': 'Garlic Broccoli', 'type': 'Chinese', 'summary': 'bla'},
+         {'name': 'Pad Thai', 'type': 'Thai', 'summary': 'bla'},
+         {'name': 'Aloo Gobi', 'type': 'Indian', 'summary': 'bla'},
+         ]">
+  <div style="width: 300px; float: left; margin-right: 20px; min-height: 125px",
+      ng-repeat="recipe in recipes" class="panel panel-default">
+    <div class="panel-heading"> {{ recipe.name }} ({{ recipe.type }})</div>
+    <div class="panel-body">
+      {{  recipe.summary }}
+    </div>
+  </div>
+  <div style="clear: left"></div>
+  <p> There are {{ recipes.length }} recipes so far!</p>
+</body>
+</html>
